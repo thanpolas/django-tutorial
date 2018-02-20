@@ -1,0 +1,14 @@
+version: '2'
+services:
+  redis:
+    image: redis
+    environment:
+      REDIS_DB: "django-poll"
+    ports:
+      - "6379:6379"
+  postgres:
+    image: mdillon/postgis:9.5
+    environment:
+      POSTGRES_DB: "django-poll"
+    ports:
+      - "5432:5432"
